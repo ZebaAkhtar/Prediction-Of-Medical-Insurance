@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../static/CSS/main.css"> 
+
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+  <div class="header">
+  <a href="#default" class="logo">Insurance</a>
+  <div class="header-right">
+    <a class="active" href="index.html">Home</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+</div>
+<br><br><br>
+<h1>Insurance Cost Prediction</h1>
+<p>Predict the cost for your Medical Insurance!</p>
+
+    <form action="{{url_for('predict')}}" method="post" class="form-style-9" >
+        <ul>
+        <li>
+            <input type="text" name="a" class="field-style field-split align-left" placeholder="Age" />
+            <input type="text" name="b" class="field-style field-split align-right" placeholder="Gender(0-Male,1-Female)" />
+        
+        </li>
+        <li>
+            <input type="text" name="c" class="field-style field-split align-left" placeholder="BMI" />
+            <input type="text" name="d" class="field-style field-split align-right" placeholder="Childrens" />
+        </li>
+        <li>
+        <input type="text" name="e" class="field-style field-full align-none" placeholder="Do you Smoke?(1-Yes,0-No)" />
+        </li>
+        <li>
+          <input type="text" name="f" class="field-style field-full align-none" placeholder="Which Region?0-NW/1-NE/2-SE/3-SW" />
+        </li>
+        <li>
+        <h3 >Predicted Amount : </h3>
+        <h3>{{pred}}</h3>
+        <input type="submit" value="Predict"/>
+        </li>
+        </ul>
+        </form>
+        
+        
+</body>
+</html>
